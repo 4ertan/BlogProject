@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\IdentityBlogApp.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/UserList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxVc2VyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
