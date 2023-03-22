@@ -1,4 +1,6 @@
-﻿using IdentityBlogApp.Web.Models;
+﻿using IdentityBlogApp.Web.CustomValidations;
+using IdentityBlogApp.Web.Localizations;
+using IdentityBlogApp.Web.Models;
 
 namespace IdentityBlogApp.Web.Extenisons
 {
@@ -15,7 +17,10 @@ namespace IdentityBlogApp.Web.Extenisons
                 options.Password.RequireUppercase = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireDigit = true;
-            }).AddEntityFrameworkStores<AppDbContext>();
+
+                options.Lockout.DefaultLockoutTimeSpan= TimeSpan.FromMinutes(3);
+                options.Lockout.MaxFailedAccessAttempts = 3;
+            }).AddPasswordValidator<PasswordValidator>().AddErrorDescriber<ErrorIdentity>().AddUserValidator<UserValidator>().AddEntityFrameworkStores<AppDbContext>();
         }
     }
 }
