@@ -2,7 +2,7 @@
 
 namespace IdentityBlogApp.Web.ViewModels
 {
-    public class ResetPasswordViewModel
+    public class ForgetPasswordViewModel
     {
         [EmailAddress(ErrorMessage = "Email formatı yanlış")]
         [Required(ErrorMessage = "Email alanı boş bırakılamaz")]

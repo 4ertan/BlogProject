@@ -27,10 +27,19 @@
                     <span class="text-danger" asp-validation-for="Password"></span>
                 </div>
             </div>
-    <div class="form-check">
-        <label class="form-check-label" asp-for="RememberMe"></label>
-        <input class="form-check-input" asp-for="RememberMe">
-    </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <label class="form-check-label" asp-for="RememberMe"></label>
+                        <input class="form-check-input" asp-for="RememberMe">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-outline-secondary btn-sm float-end" asp-controller="Home" asp-action="ForgetPassword">Şifremi unuttum</a>
+                </div>
+            </div>
+
+    
     <button type="submit" class="btn btn-success mt-4 ">Giriş Yap</button>
 </form>
 </div>

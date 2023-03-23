@@ -36,7 +36,11 @@ namespace IdentityBlogApp.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel model,string? ReturnUrl=null)
         {
-            ReturnUrl=ReturnUrl ?? Url.Action("Index","Home");
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            ReturnUrl =ReturnUrl ?? Url.Action("Index","Home");
             var hasUser=await _userManager.FindByEmailAsync(model.Email);
 
             if (hasUser==null)
@@ -83,11 +87,28 @@ namespace IdentityBlogApp.Web.Controllers
             return View();
         }
 
-        public IActionResult ResetPassword()
+        public IActionResult ForgetPassword()
         {
             return View();
         }
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordViewModel request)
+        {
+            var hasUser=await _userManager.FindByEmailAsync(request.Email);
+            if (hasUser==null)
+            {
+                ModelState.AddModelError(string.Empty,"Bu mail adresine sahip kullanıcı bulunamamıştır.");
+                return View();
+            }
+            string passwordResetToken =await _userManager.GeneratePasswordResetTokenAsync(hasUser);
+            var passwordResetLink=Url.Action("ResetPassword","Home",new{userId=hasUser.Id,Token=passwordResetToken});
 
+            TempData["success"] = "Şifre yenileme linki, email adresinize gönderilmiştir.";
+            return RedirectToAction("ForgetPassword","Home");
+
+
+        //https://localhost:7138
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

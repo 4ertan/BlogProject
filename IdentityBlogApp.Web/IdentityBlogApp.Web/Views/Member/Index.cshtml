@@ -2,6 +2,28 @@
 @{
     ViewData["Title"] = "Index";
 }
+@model UserViewModel
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+<h2>Kullanıcı Bilgileri</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Kullanıcı Adı</th>
+                    <th>Email</th>
+                    <th>Telefon No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.UserName</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.PhoneNumber</td>
+                </tr>
+            </tbody>
 
-<h1>Merhaba @User.Identity.Name.ToUpper()</h1>
 
+        </table>
+
+    </div>
+</div>

@@ -8,9 +8,11 @@
     <ul class="navbar nav me-0">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                @User.Identity.Name
+                @User.Identity.Name.ToUpper()
             </a>
             <ul class="dropdown-menu">
+                <li><a class="dropdown-item"  asp-controller="Member" asp-action="Index">Profil</a></li>
+                <li><a class="dropdown-item" asp-controller="Member" asp-action="PasswordChange">Şifremi Değiştir</a></li>
                 <li><a class="dropdown-item" asp-route-returnurl="/Home/Index" asp-controller="Member" asp-action="LogOut">Çıkış Yap</a></li>
 
             </ul>
