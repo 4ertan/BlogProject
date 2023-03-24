@@ -9,6 +9,7 @@ namespace IdentityBlogApp.Web.Localizations
             return new() { Code = "DuplicateUserName", Description = $"Bu kullanıcı adı ({userName}) başka bir kullanıcı tarafından kullanılmaktadır." };
             //return base.DuplicateUserName(userName);
         }
+        
         public override IdentityError DuplicateEmail(string email)
         {
             return new IdentityError() { Code = "DuplicateEmail", Description = $"Bu email({email}) başka bir kullanıcı tarafından kullanılmaktadır." };
@@ -24,6 +25,7 @@ namespace IdentityBlogApp.Web.Localizations
             return new IdentityError() { Code = "PasswordRequiresUpper", Description = "Şifre en az 1 adet büyük karakter içermelidir." };
             //return base.PasswordRequiresUpper();
         }
+       
         //public override IdentityError PasswordRequiresNonAlphanumeric()
         //{
         //    return new IdentityError() { Code = "PasswordRequiresNonAlphanumeric", Description = "Şifre özel karakter içermelidir." };

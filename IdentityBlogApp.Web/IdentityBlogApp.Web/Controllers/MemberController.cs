@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace IdentityBlogApp.Web.Controllers
 {
@@ -29,6 +30,12 @@ namespace IdentityBlogApp.Web.Controllers
                 UserName = currentUser.UserName
             };
             return View(userViewModel);
+        }
+
+        public IActionResult UserEdit()
+        {
+            ViewBag.genderList =new SelectList(Enum.GetNames(typeof(GenderEnum)));
+            return View();
         }
 
         public async Task<IActionResult> LogOut()
