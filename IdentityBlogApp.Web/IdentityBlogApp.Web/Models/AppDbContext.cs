@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using IdentityBlogApp.Web.Models;
 
 namespace IdentityBlogApp.Web.Models
 {
@@ -7,6 +8,8 @@ namespace IdentityBlogApp.Web.Models
     {
 
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options) { }
+
+        public DbSet<IdentityBlogApp.Web.Models.Tag> Tag { get; set; } = default!;
        
     }
 }

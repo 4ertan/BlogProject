@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\IdentityBlogApp.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/AddTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZGRUYWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/TagList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUYWdMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/UserList.cshtml]

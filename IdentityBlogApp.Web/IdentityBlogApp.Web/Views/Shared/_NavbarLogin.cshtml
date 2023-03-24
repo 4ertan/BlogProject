@@ -5,12 +5,18 @@
 
 @if (User.Identity!.IsAuthenticated)
 {
+    if (User.IsInRole("Admin"))
+    {
+        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn btn-outline-danger">Admin Sayfası</a>
+    }
+   
     <a @*asp-controller="Home" asp-action="SignIn"*@ class="btn btn-outline-success mx-2">Makale Ekle</a>
     <ul class="navbar nav me-0">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 @User.Identity.Name.ToUpper()
             </a>
+
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item"  asp-controller="Member" asp-action="Index">Profil</a></li>
                 <li><a class="dropdown-item"  asp-controller="Member" asp-action="UserEdit">Kullanıcı Düzenle</a></li>
@@ -20,6 +26,8 @@
             </ul>
         </li>
     </ul>
+   
+   
 }
 else
 {
