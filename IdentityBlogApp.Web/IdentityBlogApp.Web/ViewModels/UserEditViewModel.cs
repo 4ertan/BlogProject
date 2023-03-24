@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using IdentityBlogApp.Web.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace IdentityBlogApp.Web.ViewModels
 {
@@ -16,11 +17,11 @@ namespace IdentityBlogApp.Web.ViewModels
         public string Phone { get; set; } = null!;
         [DataType(DataType.Date)]
         [Display(Name = "Doğum Tarihi :")]
-        public string? BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         [Display(Name = "Profil Fotosu :")]
         public IFormFile? Picture { get; set; }
 
         [Display(Name = "Cinsiyet :")]
-        public Byte? Gender { get; set; }
+        public GenderEnum? Gender { get; set; }
     }
 }

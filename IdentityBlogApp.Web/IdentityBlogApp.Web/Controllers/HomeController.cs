@@ -12,11 +12,13 @@ namespace IdentityBlogApp.Web.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+       private readonly RoleManager<AppRole> _roleManager;
+        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> roleManager = null)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult Index()
@@ -75,10 +77,13 @@ namespace IdentityBlogApp.Web.Controllers
             {
                 return View();
             }
-        IdentityResult identityResult=await  _userManager.CreateAsync(new() {UserName=request.UserName,PhoneNumber=request.Phone,Email=request.Email},request.PasswordConfirm);
-
+            
+         var identityResult=await  _userManager.CreateAsync(new() {UserName=request.UserName,PhoneNumber=request.Phone,Email=request.Email},request.PasswordConfirm);
+           var role = await _roleManager.CreateAsync(new() { Name = "Member" });
             if (identityResult.Succeeded)
             {
+                AppUser user = await _userManager.FindByEmailAsync(request.Email);
+                await _userManager.AddToRoleAsync(user, "Member");
                TempData["SuccessMessage"] = "Üyelik kayit işlemi başarılı";
               return RedirectToAction(nameof(HomeController.SignUp));
             }
@@ -117,3 +122,4 @@ namespace IdentityBlogApp.Web.Controllers
         }
     }
 }
+//abmzqyftxgxfwrsq

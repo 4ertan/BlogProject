@@ -32,12 +32,29 @@ namespace IdentityBlogApp.Web.Controllers
             return View(userViewModel);
         }
 
-        public IActionResult UserEdit()
+        public async Task<IActionResult> UserEdit()
         {
             ViewBag.genderList =new SelectList(Enum.GetNames(typeof(GenderEnum)));
-            return View();
-        }
 
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            UserEditViewModel userEditViewModel = new UserEditViewModel()
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                BirthDate = user.BirthDate,
+                Phone = user.PhoneNumber,
+                Gender = user.Gender,
+
+            };
+
+            return View(userEditViewModel);
+        }
+        public IActionResult AccessDenied(string Url)
+        {
+            return View();
+
+        }
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();

@@ -18,6 +18,10 @@ builder.Services.ConfigureApplicationCookie(opt =>
     var cookieBuilder=new CookieBuilder();
     cookieBuilder.Name = "AppCookie";
     opt.LoginPath = new PathString("/Home/SignIn");
+    opt.LogoutPath = new PathString("/Member/logout");
+
+    opt.AccessDeniedPath = new PathString("/Member/AccessDenied");
+
     opt.Cookie= cookieBuilder;
     opt.ExpireTimeSpan=TimeSpan.FromDays(60);
     opt.SlidingExpiration = true;
@@ -50,4 +54,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+
+
+    app.Run();
