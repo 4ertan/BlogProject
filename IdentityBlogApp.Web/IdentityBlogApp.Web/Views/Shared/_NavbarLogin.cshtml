@@ -7,10 +7,10 @@
 {
     if (User.IsInRole("Admin"))
     {
-        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn btn-outline-danger">Admin Sayfası</a>
+        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn btn-outline-danger"> <i class="bi bi-code-slash"></i>Admin Sayfası</a>
     }
-   
-    <a asp-controller="Member" asp-action="PostAdd" class="btn btn-outline-success mx-2" >Makale Ekle</a>
+
+    <a asp-controller="Member" asp-action="PostAdd" class="btn btn-outline-success mx-2">Makale Ekle<i class="bi bi-sticky-fill"></i></a>
     <ul class="navbar nav me-0">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

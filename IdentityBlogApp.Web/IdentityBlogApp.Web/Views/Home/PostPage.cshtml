@@ -1,0 +1,48 @@
+﻿@model List<PostViewModel>
+@{
+    ViewData["Title"] = "PostPage";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <div class="col-md-12 mb-2">
+            <div class="card border-dark col-mb-3" style="max-width: 10rem;">
+                <div class="card-header">Kategoriler</div>
+                @foreach (var item in ViewBag.TagList)
+                {
+                    <div class="card-body text-dark">
+                        <h5 class="card-title"><a href="#">@item.Name</a></h5>
+
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 ">
+                    <div class="card mb-4" style="max-width: 500px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="..." class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.Title</h5>
+                                    <p class="card-text">@item.Body.Substring(0,10)</p>
+                                    <p class="card-text"><small class="text-muted">@item.CreatedDate<span> </span> <i class="bi bi-calendar3"></i></small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+   
+</div>
+

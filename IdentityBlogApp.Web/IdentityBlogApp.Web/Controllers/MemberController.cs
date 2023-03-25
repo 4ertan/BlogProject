@@ -48,12 +48,14 @@ namespace IdentityBlogApp.Web.Controllers
                 BirthDate = user.BirthDate,
                 Phone = user.PhoneNumber,
                 Gender = user.Gender,
+                Bio = user.Bio
+
 
             };
 
             return View(userEditViewModel);
         }
-
+        [HttpPost]
         public async Task<IActionResult> UserEdit(UserEditViewModel model)
         {
             if (!ModelState.IsValid)
@@ -66,22 +68,36 @@ namespace IdentityBlogApp.Web.Controllers
             currentUser.Email= model.Email;
             currentUser.Gender= model.Gender;
             currentUser.Bio=model.Bio;
-
+            TempData["Success"] = "Güncelleme Başarılı";
             await _userManager.UpdateAsync(currentUser);
 
 
-            return View();
+            return RedirectToAction("UserEdit");
 
         }
-        public async Task<IActionResult> PostAdd()
+        public IActionResult PostAdd()
         {
-            if (_appDbContext.Tags.ToList()!=null)
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> PostAdd(PostViewModel model)
+        {
+            if (!ModelState.IsValid)
             {
-                var tagList = _appDbContext.Tags.ToList();
-                ViewBag.tagList = tagList;
-            }
-            
+                ModelState.AddModelError(string.Empty, "Hatalı işlem");
             return  View();
+            }
+            var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
+            Post post = new Post();
+            post.Title=model.Title;
+            post.Body=model.Body;
+            post.AppUser=currentUser;
+            
+            post.ImageUrl=model.ImageUrl;
+            _appDbContext.Add(post);
+            _appDbContext.SaveChanges();
+            TempData["Success"] = "Post başarılı";
+            return RedirectToAction("PostAdd");
         }
         public IActionResult AccessDenied(string Url)
         {

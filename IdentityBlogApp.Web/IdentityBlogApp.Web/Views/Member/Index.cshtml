@@ -4,26 +4,28 @@
 }
 @model UserViewModel
 <div class="row">
-    <div class="col-md-6 offset-md-3">
-<h2>Kullanıcı Bilgileri</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Kullanıcı Adı</th>
-                    <th>Email</th>
-                    <th>Telefon No</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>@Model.UserName</td>
-                    <td>@Model.Email</td>
-                    <td>@Model.PhoneNumber</td>
-                </tr>
-            </tbody>
+    <div class="col-md-12 offset-md-5">
+       
+            <h2>Kullanıcı Bilgileri</h2>
+
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.UserName!.ToUpper()</h5>
+                    <p class="card-text">@Model.Bio</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Model.PhoneNumber</li>
+                    <li class="list-group-item">@Model.Email</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+       
 
 
-        </table>
-
-    </div>
+</div>
 </div>

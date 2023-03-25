@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using IdentityBlogApp.Web.Extenisons;
+using Microsoft.Extensions.Hosting;
 
 namespace IdentityBlogApp.Web.Controllers
 {
@@ -13,24 +14,67 @@ namespace IdentityBlogApp.Web.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
        private readonly RoleManager<AppRole> _roleManager;
-        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> roleManager = null)
+        private readonly AppDbContext _appDbContext;
+        public HomeController(ILogger<HomeController> logger, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<AppRole> roleManager = null, AppDbContext appDbContext=null)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _appDbContext = appDbContext;
         }
 
         public IActionResult Index()
         {
             return View();
         }
+        public IActionResult PostPage()
+        {
+            var PostList=_appDbContext.Posts.ToList();
+            List<PostViewModel> PostViewModelList= new List<PostViewModel>();
+            ViewBag.TagList=_appDbContext.Tags.ToList();
 
-        public IActionResult Privacy()
+            if (PostList != null)
+            {
+                foreach (var item in PostList)
+                {
+                    PostViewModel postViewModel = new PostViewModel
+                    {
+                        Id = item.Id,
+                        Body = item.Body,
+                        Author = item.AppUser,
+                        CreatedDate = item.CreatedDate,
+                        ImageUrl = item.ImageUrl,
+                        Title = item.Title,
+                       
+                       
+                    };
+                    PostViewModelList.Add(postViewModel);
+
+                }
+
+                return View(PostViewModelList);
+            }
+            return View();
+
+        }
+        public IActionResult About()
         {
             return View();
         }
+        public IActionResult PostList()
+        {
+              var post=  _appDbContext.Posts.ToList();
+            if (post != null)
+            {
+                
 
+            return View(post);
+            }
+
+            return View();
+
+        }
         public IActionResult SignIn()
         {
             return View();
