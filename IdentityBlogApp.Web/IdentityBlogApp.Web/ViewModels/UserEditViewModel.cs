@@ -23,5 +23,7 @@ namespace IdentityBlogApp.Web.ViewModels
 
         [Display(Name = "Cinsiyet :")]
         public GenderEnum? Gender { get; set; }
+
+        public string Bio { get; set; }
     }
 }

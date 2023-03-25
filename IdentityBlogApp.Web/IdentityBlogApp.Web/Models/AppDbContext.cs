@@ -9,7 +9,9 @@ namespace IdentityBlogApp.Web.Models
 
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options) { }
 
-        public DbSet<IdentityBlogApp.Web.Models.Tag> Tag { get; set; } = default!;
+        public DbSet<IdentityBlogApp.Web.Models.Tag> Tags { get; set; } = default!;
+
+        public DbSet<IdentityBlogApp.Web.Models.Post> Posts { get; set; } = default!;
        
     }
 }

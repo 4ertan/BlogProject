@@ -37,17 +37,15 @@ namespace IdentityBlogApp.Web.Areas.Admin.Controllers
                 return View();
             }
             Tag addTag = new Tag() { Name = model.Name };
-            _appDbContext.Tag.Add(addTag);
+            _appDbContext.Tags.Add(addTag);
             _appDbContext.SaveChanges();
             TempData["Success"] = $"Tag {model.Name} eklendi";
             return RedirectToAction("AddTag");
 
-
-
         }
         public IActionResult TagList()
         {
-           var tagList=_appDbContext.Tag.ToList();
+           var tagList=_appDbContext.Tags.ToList();
             return View(tagList);
         }
         public async Task<IActionResult> UserList()

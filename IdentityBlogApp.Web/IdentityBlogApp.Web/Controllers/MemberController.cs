@@ -1,4 +1,5 @@
-﻿using IdentityBlogApp.Web.Extenisons;
+﻿using IdentityBlogApp.Web.Areas.Admin.Models;
+using IdentityBlogApp.Web.Extenisons;
 using IdentityBlogApp.Web.Models;
 using IdentityBlogApp.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -14,16 +15,18 @@ namespace IdentityBlogApp.Web.Controllers
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
-        public MemberController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+        private readonly AppDbContext _appDbContext;
+        public MemberController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, AppDbContext appDbContext)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _appDbContext = appDbContext;
         }
 
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
-            var userViewModel = new UserViewModel
+            var userViewModel = new ViewModels.UserViewModel
             {
                 Email = currentUser!.Email,
                 PhoneNumber = currentUser.PhoneNumber,
@@ -49,6 +52,36 @@ namespace IdentityBlogApp.Web.Controllers
             };
 
             return View(userEditViewModel);
+        }
+
+        public async Task<IActionResult> UserEdit(UserEditViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+            return View();
+
+            }
+            var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
+            currentUser.UserName= model.UserName;
+            currentUser.Email= model.Email;
+            currentUser.Gender= model.Gender;
+            currentUser.Bio=model.Bio;
+
+            await _userManager.UpdateAsync(currentUser);
+
+
+            return View();
+
+        }
+        public async Task<IActionResult> PostAdd()
+        {
+            if (_appDbContext.Tags.ToList()!=null)
+            {
+                var tagList = _appDbContext.Tags.ToList();
+                ViewBag.tagList = tagList;
+            }
+            
+            return  View();
         }
         public IActionResult AccessDenied(string Url)
         {
