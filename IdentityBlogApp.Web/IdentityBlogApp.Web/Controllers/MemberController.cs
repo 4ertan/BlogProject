@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.FileProviders;
 
 namespace IdentityBlogApp.Web.Controllers
 {
@@ -16,11 +17,13 @@ namespace IdentityBlogApp.Web.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly AppDbContext _appDbContext;
-        public MemberController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, AppDbContext appDbContext)
+        private readonly IFileProvider _fileProvider;
+        public MemberController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, AppDbContext appDbContext, IFileProvider fileProvider)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appDbContext = appDbContext;
+            _fileProvider = fileProvider;
         }
 
         public async Task<IActionResult> Index()
@@ -66,11 +69,20 @@ namespace IdentityBlogApp.Web.Controllers
             var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
             currentUser.UserName= model.UserName;
             currentUser.Email= model.Email;
+            currentUser.PhoneNumber = model.Phone;
             currentUser.Gender= model.Gender;
+            currentUser.BirthDate= model.BirthDate;
             currentUser.Bio=model.Bio;
             TempData["Success"] = "Güncelleme Başarılı";
             await _userManager.UpdateAsync(currentUser);
 
+            //if (model.Picture!=null && model.Picture.Length>0)
+            //{
+            //    var wwwrootFolder = _fileProvider.GetDirectoryContents("wwwroot");
+            //    string randomFileName=$"Guid.NewGuid().ToString(){Path.GetExtension(model.Picture.FileName)}";
+            //    var newPicturePath=Path.Combine(wwwrootFolder!.First(x=>x.Name=="userPictures").PhysicalPath,randomFileName);
+            //    using var stream = new FileStream(newPicturePath, FileMode.Create);
+            //}
 
             return RedirectToAction("UserEdit");
 
@@ -92,20 +104,24 @@ namespace IdentityBlogApp.Web.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> PostAdd(PostViewModel model)
+        public async Task<IActionResult> PostAdd(PostViewModel model,List<string> tagList)
         {
             if (!ModelState.IsValid)
             {
                 ModelState.AddModelError(string.Empty, "Hatalı işlem");
             return  View();
             }
-           
+            
             var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
             Post post = new Post();
             post.Title=model.Title;
             post.Body=model.Body;
             post.AppUser=currentUser;
-            
+
+            foreach (string item in tagList)
+            {
+                post.PostTags.Add(new() {Name=item});
+            }
             post.ImageUrl=model.ImageUrl;
             _appDbContext.Add(post);
             _appDbContext.SaveChanges();

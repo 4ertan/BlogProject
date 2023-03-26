@@ -30,7 +30,7 @@ namespace IdentityBlogApp.Web.Controllers
         }
         public IActionResult PostPage()
         {
-            var PostList=_appDbContext.Posts.ToList();
+            var PostList=_appDbContext.Posts.OrderByDescending(x=>x.CreatedDate).Take(10).ToList();
             List<PostViewModel> PostViewModelList= new List<PostViewModel>();
             ViewBag.TagList=_appDbContext.Tags.ToList();
 
@@ -49,15 +49,31 @@ namespace IdentityBlogApp.Web.Controllers
                        
                        
                     };
+                    
                     PostViewModelList.Add(postViewModel);
 
                 }
-
+                
                 return View(PostViewModelList);
             }
             return View();
 
         }
+
+        public IActionResult PostDetail(int id)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError(string.Empty, "Hatalı işlem");
+                return RedirectToAction("PostPage");
+            }
+            var post = _appDbContext.Posts.Find(id);
+            PostViewModel postView = new() { Body = post.Body, Title = post.Title, Author = post.AppUser, CreatedDate = post.CreatedDate, ImageUrl = post.ImageUrl };
+            long sayı= post.ClickCount;
+            post.ClickCount = sayı + 1;
+            return View(postView); 
+        }
+
         public IActionResult About()
         {
             return View();
@@ -123,7 +139,8 @@ namespace IdentityBlogApp.Web.Controllers
             }
             
          var identityResult=await  _userManager.CreateAsync(new() {UserName=request.UserName,PhoneNumber=request.Phone,Email=request.Email},request.PasswordConfirm);
-           var role = await _roleManager.CreateAsync(new() { Name = "Member" });
+            //await _roleManager.a
+           //await _roleManager.CreateAsync(new() { Name = "Member" });
             if (identityResult.Succeeded)
             {
                 AppUser user = await _userManager.FindByEmailAsync(request.Email);

@@ -1,0 +1,17 @@
+﻿@model PostViewModel
+@{
+    ViewData["Title"] = "PostDetail";
+}
+
+<div class="card">
+    <div class="card-header">
+        @Model.Title
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p>@Model.Body</p>
+            <footer class="blockquote-footer">@Model.CreatedDate <cite title="Source Title"></cite></footer>
+        </blockquote>
+    </div>
+</div>
+

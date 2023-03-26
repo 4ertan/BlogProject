@@ -12,6 +12,7 @@ namespace IdentityBlogApp.Web.Models
         public DbSet<IdentityBlogApp.Web.Models.Tag> Tags { get; set; } = default!;
 
         public DbSet<IdentityBlogApp.Web.Models.Post> Posts { get; set; } = default!;
+        
        
     }
 }
