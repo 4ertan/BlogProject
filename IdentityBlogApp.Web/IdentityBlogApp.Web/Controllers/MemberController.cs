@@ -77,6 +77,18 @@ namespace IdentityBlogApp.Web.Controllers
         }
         public IActionResult PostAdd()
         {
+            var taglist = new List<SelectListItem>();
+            var tags=_appDbContext.Tags.ToList();
+
+            foreach (var item in tags)
+            {
+                taglist.Add(new SelectListItem
+                {
+                    Text=item.Name,
+                    Value=item.Id.ToString(),
+                });
+            }
+            ViewBag.taglist=taglist;
             return View();
         }
         [HttpPost]
@@ -87,6 +99,7 @@ namespace IdentityBlogApp.Web.Controllers
                 ModelState.AddModelError(string.Empty, "Hatalı işlem");
             return  View();
             }
+           
             var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);
             Post post = new Post();
             post.Title=model.Title;
