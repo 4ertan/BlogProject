@@ -9,20 +9,26 @@
             <h2>Kullanıcı Bilgileri</h2>
 
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                @if (String.IsNullOrEmpty(Model.PictureUrl))
+            {
+                <img class="rounded" src="/userpictures/default_user_picture.png"/>
+            }else{
+                <img class="rounded" src="/userpictures/@(Model.PictureUrl)"/>
+            }
                 <div class="card-body">
                     <h5 class="card-title">@Model.UserName!.ToUpper()</h5>
-                    <p class="card-text">@Model.Bio</p>
+                <p class="card-text bg-dark "></p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">@Model.PhoneNumber</li>
+                <li class="list-group-item bg-dark"></li>
                     <li class="list-group-item">@Model.Email</li>
-                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item bg-dark"></li>
                 </ul>
                 <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                @Model.Bio
                 </div>
+            <div class="btn btn-danger"> <a asp-action="MemberDelete" asp-route-userName="@Model.UserName">Hesabımı Sil</a></div>
             </div>
        
 

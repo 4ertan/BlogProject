@@ -245,12 +245,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\dcb840e6-9e83-4635-84c2-595bf371ed4f.jpg",
-      "PackagePath": "staticwebassets\\userpictures\\dcb840e6-9e83-4635-84c2-595bf371ed4f.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\e75a87fd-256e-4400-9da8-4870be78c494.jpg",
-      "PackagePath": "staticwebassets\\userpictures\\e75a87fd-256e-4400-9da8-4870be78c494.jpg"
+      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\default_user_picture.png",
+      "PackagePath": "staticwebassets\\userpictures\\default_user_picture.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.IdentityBlogApp.Web.Microsoft.AspNetCore.StaticWebAssets.props",

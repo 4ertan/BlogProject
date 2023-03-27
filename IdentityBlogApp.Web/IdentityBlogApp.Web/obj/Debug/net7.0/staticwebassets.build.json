@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p7/YXm4cgVIUhm+irC3/Z02sGumcArVwrlfP/lzoiyo=",
+  "Hash": "LZZsbjICZ4w7i8dbrgdfRO622hIhXuh3633ojchENHY=",
   "Source": "IdentityBlogApp.Web",
   "BasePath": "_content/IdentityBlogApp.Web",
   "Mode": "Default",
@@ -1071,12 +1071,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\dcb840e6-9e83-4635-84c2-595bf371ed4f.jpg",
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\default_user_picture.png",
       "SourceId": "IdentityBlogApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
       "BasePath": "_content/IdentityBlogApp.Web",
-      "RelativePath": "userpictures/dcb840e6-9e83-4635-84c2-595bf371ed4f.jpg",
+      "RelativePath": "userpictures/default_user_picture.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1085,24 +1085,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\userpictures\\dcb840e6-9e83-4635-84c2-595bf371ed4f.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\e75a87fd-256e-4400-9da8-4870be78c494.jpg",
-      "SourceId": "IdentityBlogApp.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
-      "BasePath": "_content/IdentityBlogApp.Web",
-      "RelativePath": "userpictures/e75a87fd-256e-4400-9da8-4870be78c494.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\userpictures\\e75a87fd-256e-4400-9da8-4870be78c494.jpg"
+      "OriginalItemSpec": "wwwroot\\userpictures\\default_user_picture.png"
     }
   ]
 }

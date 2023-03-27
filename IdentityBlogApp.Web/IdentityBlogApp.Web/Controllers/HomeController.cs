@@ -94,6 +94,28 @@ namespace IdentityBlogApp.Web.Controllers
                 return RedirectToAction("PostPage");
             }
             var post = _appDbContext.Posts.Find(id);
+            string PostAutorId = post.AppUserId;
+            var postList = _appDbContext.Posts.ToList();
+            List<PostViewModel> AuthorPosts= new List<PostViewModel>();
+            foreach (var item in postList)
+            {
+                if (item.AppUserId==PostAutorId)
+                {
+                    PostViewModel postViewModel = new()
+                    {
+                        Id = item.Id,
+                        Body = item.Body,
+                        Author = item.AppUser,
+                        CreatedDate = item.CreatedDate,
+                        ImageUrl = item.ImageUrl,
+                        Title = item.Title,
+                        ClickCount = item.ClickCount,
+                    };
+                    AuthorPosts.Add(postViewModel);
+
+                }
+            }
+            ViewBag.PostAuthor = AuthorPosts;
             PostViewModel postView = new() { Body = post.Body, Title = post.Title, Author = post.AppUser, CreatedDate = post.CreatedDate, ImageUrl = post.ImageUrl };
             long sayı= post.ClickCount;
             post.ClickCount = sayı + 1;

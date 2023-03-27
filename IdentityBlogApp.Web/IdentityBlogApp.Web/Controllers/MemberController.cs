@@ -33,7 +33,8 @@ namespace IdentityBlogApp.Web.Controllers
             {
                 Email = currentUser!.Email,
                 PhoneNumber = currentUser.PhoneNumber,
-                UserName = currentUser.UserName
+                UserName = currentUser.UserName,
+                PictureUrl = currentUser.Picture,
             };
             return View(userViewModel);
         }
@@ -42,7 +43,7 @@ namespace IdentityBlogApp.Web.Controllers
         {
             ViewBag.genderList =new SelectList(Enum.GetNames(typeof(GenderEnum)));
 
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var user = await _userManager.FindByNameAsync(User.Identity.Name!);
 
             UserEditViewModel userEditViewModel = new UserEditViewModel()
             {
@@ -51,7 +52,9 @@ namespace IdentityBlogApp.Web.Controllers
                 BirthDate = user.BirthDate,
                 Phone = user.PhoneNumber,
                 Gender = user.Gender,
-                Bio = user.Bio
+                Bio = user.Bio,
+                
+                
 
 
             };
@@ -82,7 +85,7 @@ namespace IdentityBlogApp.Web.Controllers
                 var newPicturePath = Path.Combine(wwwrootFolder!.First(x => x.Name == "userpictures").PhysicalPath, randomFileName);
                 using var stream = new FileStream(newPicturePath, FileMode.Create);
                 await model.Picture.CopyToAsync(stream);
-                //model.Picture = randomFileName;
+                currentUser.Picture = randomFileName;
             }
             TempData["Success"] = "Güncelleme Başarılı";
             await _userManager.UpdateAsync(currentUser);
