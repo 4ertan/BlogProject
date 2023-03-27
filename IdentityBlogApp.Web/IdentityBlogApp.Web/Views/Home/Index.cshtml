@@ -1,26 +1,66 @@
-﻿@{
+﻿@model List<PostViewModel>
+@{
     ViewData["Title"] = "Home Page";
 }
+<div style=" background-color:black">
+<div class="col-md-6 offset-4" style="width:400px;">
 
-
-<div class="row">
-    <div class="col-md-10">
-        <div class="row">
-           @*<partial name="PostPagePartial" />*@
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://cdn.discordapp.com/attachments/990816789246124032/1089995187150921818/4ertan_BackGround_image_for_website_text_Vedium_a3d15288-2e43-4ced-a415-00230a842cce.png" class="d-block w-100" alt="...">
+            </div>
+            @*  <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://cdn.discordapp.com/attachments/990816789246124032/1089995187150921818/4ertan_BackGround_image_for_website_text_Vedium_a3d15288-2e43-4ced-a415-00230a842cce.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="https://cdn.discordapp.com/attachments/990816789246124032/1089994784900399125/4ertan_BackGround_image_for_website_text_Vedium_f7301b65-27f4-4d66-a214-1aeb116b49cb.png" class="d-block w-100" alt="...">
+            </div>*@
         </div>
+        @* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>*@
     </div>
 </div>
+</div>
+<nav class="navbar bg-body-tertiary bg-primary mt-2">
+    <div class="container-fluid">
+        <a class="navbar-brand text-dark">En Çok Okunanlar&nbsp;<i class="bi bi-eye-fill"></i></a>
+    </div>
+</nav>
+<div class="row mt-2">
+    <div class="col-md-12">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 ">
+                    <div class="card mb-4" style="max-width: 500px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="..." class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">@item.Title</h5>
+                                    <p class="card-text">@item.Body.Substring(0,10)  ...</p>
+                                    <p></p>
+                                    <p class="card-text"><a asp-action="PostDetail" asp-route-id="@item.Id">Detay</a></p>
 
+                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>@item.ClickCount </span> </small> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-@*<div class="col-md-2">
-    <div class="col-md-12 mb-2">
-        <div class="card border-dark col-mb-3" style="max-width: 10rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body text-dark">
-                <h5 class="card-title">Dark card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+            }
         </div>
     </div>
-</div>*@
+
+</div>
+

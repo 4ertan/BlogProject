@@ -26,6 +26,32 @@ namespace IdentityBlogApp.Web.Controllers
 
         public IActionResult Index()
         {
+            var PostList = _appDbContext.Posts.OrderByDescending(x => x.ClickCount).Take(10).ToList();
+            List<PostViewModel> PostViewModelList = new List<PostViewModel>();
+            
+
+            if (PostList != null)
+            {
+                foreach (var item in PostList)
+                {
+                    PostViewModel postViewModel = new PostViewModel
+                    {
+                        Id = item.Id,
+                        Body = item.Body,
+                        Author = item.AppUser,
+                        CreatedDate = item.CreatedDate,
+                        ImageUrl = item.ImageUrl,
+                        Title = item.Title,
+                        ClickCount = item.ClickCount,
+
+                    };
+
+                    PostViewModelList.Add(postViewModel);
+
+                }
+
+                return View(PostViewModelList);
+            }
             return View();
         }
         public IActionResult PostPage()
