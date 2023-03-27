@@ -22,6 +22,11 @@ namespace IdentityBlogApp.Web.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            var postList=_appDbContext.Posts.ToList();
+            return View(postList);
+        }
+        public IActionResult PostList()
+        {
             return View();
         }
         public IActionResult AddTag()
@@ -42,6 +47,17 @@ namespace IdentityBlogApp.Web.Areas.Admin.Controllers
             TempData["Success"] = $"Tag {model.Name} eklendi";
             return RedirectToAction("AddTag");
 
+        }
+        public IActionResult UserDelete(string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError(string.Empty, "Hatalı işlem");
+                return RedirectToAction("UserList");
+            }
+            var user=_appDbContext.Users.Find(id);
+            UserViewModel model = new() { Id=user.Id, Name=user.UserName,CreatedDate=user.CreatedDate,Email=user.Email };
+            return View(model);
         }
         public IActionResult TagList()
         {

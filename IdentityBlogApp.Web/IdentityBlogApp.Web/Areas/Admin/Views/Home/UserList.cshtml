@@ -3,14 +3,21 @@
 }
 @model List<AdminModel.UserViewModel>
 
+@section Css{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">  
+}
+
+
+
 <h1>Üye Listesi</h1>
 
-<table class="table table-striped">
+<table id="table_id" class="table table-bordered">
    <thead>
        <tr>
            <th>Id</th>
            <th>Kullanıcı Adı</th>
            <th>Email</th>
+            <th>Sil</th>
        </tr>
    </thead>
    <tbody>
@@ -20,8 +27,21 @@
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td>@item.Email</td>
+                <td><a asp-action="UserDelete" class="btn btn-outline-danger" asp-route-id="@item.Id">Kullanıcıyı Sil</a></td>
             </tr>
         }
 
    </tbody>
 </table>
+
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+    </script>
+}
+

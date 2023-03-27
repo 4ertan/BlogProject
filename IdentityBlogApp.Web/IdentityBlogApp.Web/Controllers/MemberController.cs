@@ -73,17 +73,19 @@ namespace IdentityBlogApp.Web.Controllers
             currentUser.Gender= model.Gender;
             currentUser.BirthDate= model.BirthDate;
             currentUser.Bio=model.Bio;
+            
+
+            if (model.Picture != null && model.Picture.Length > 0)
+            {
+                var wwwrootFolder = _fileProvider.GetDirectoryContents("wwwroot");
+                string randomFileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(model.Picture.FileName)}";
+                var newPicturePath = Path.Combine(wwwrootFolder!.First(x => x.Name == "userpictures").PhysicalPath, randomFileName);
+                using var stream = new FileStream(newPicturePath, FileMode.Create);
+                await model.Picture.CopyToAsync(stream);
+                //model.Picture = randomFileName;
+            }
             TempData["Success"] = "Güncelleme Başarılı";
             await _userManager.UpdateAsync(currentUser);
-
-            //if (model.Picture!=null && model.Picture.Length>0)
-            //{
-            //    var wwwrootFolder = _fileProvider.GetDirectoryContents("wwwroot");
-            //    string randomFileName=$"Guid.NewGuid().ToString(){Path.GetExtension(model.Picture.FileName)}";
-            //    var newPicturePath=Path.Combine(wwwrootFolder!.First(x=>x.Name=="userPictures").PhysicalPath,randomFileName);
-            //    using var stream = new FileStream(newPicturePath, FileMode.Create);
-            //}
-
             return RedirectToAction("UserEdit");
 
         }

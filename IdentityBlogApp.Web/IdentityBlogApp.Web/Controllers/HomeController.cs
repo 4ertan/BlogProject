@@ -71,6 +71,7 @@ namespace IdentityBlogApp.Web.Controllers
             PostViewModel postView = new() { Body = post.Body, Title = post.Title, Author = post.AppUser, CreatedDate = post.CreatedDate, ImageUrl = post.ImageUrl };
             long sayı= post.ClickCount;
             post.ClickCount = sayı + 1;
+            _appDbContext.SaveChanges();
             return View(postView); 
         }
 
