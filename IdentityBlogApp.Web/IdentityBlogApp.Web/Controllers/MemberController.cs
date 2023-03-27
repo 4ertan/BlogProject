@@ -89,6 +89,26 @@ namespace IdentityBlogApp.Web.Controllers
             return RedirectToAction("UserEdit");
 
         }
+        public IActionResult MemberPosts()
+        {
+            var PostList = _appDbContext.Posts.ToList();
+            List<PostViewModel> posts = new List<PostViewModel>();
+            var user = User.Identity.Name;
+            var find = _appDbContext.Users.Where(x => x.UserName == user).FirstOrDefault();
+            foreach (var item in PostList)
+            {
+                if (item.AppUserId == find.Id)
+                {
+                    PostViewModel postsItem = new PostViewModel();
+
+                    postsItem.Body = item.Body;
+                    postsItem.Title = item.Title;
+                    postsItem.CreatedDate = item.CreatedDate;
+                    posts.Add(postsItem);
+                }
+            }
+            return View(posts);
+        }
         public IActionResult PostAdd()
         {
             var taglist = new List<SelectListItem>();
