@@ -32,8 +32,11 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">@item.Title</h5>
-                                    <p class="card-text">@item.Body.Substring(0,10)</p>
-                                    <p class="card-text"><small class="text-muted">@item.CreatedDate<span> </span> <i class="bi bi-calendar3"></i></small> <a asp-action="PostDetail" asp-route-id="@item.Id">Detay</a></p>
+                                    <p class="card-text">@item.Body.Substring(0,10)  ...</p>
+                                    <p></p>
+                                    <p class="card-text"><a asp-action="PostDetail" asp-route-id="@item.Id">Detay</a></p>
+
+                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>@item.ClickCount </span> </small> </p>
                                 </div>
                             </div>
                         </div>

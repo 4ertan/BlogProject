@@ -17,6 +17,7 @@ namespace IdentityBlogApp.Web.ViewModels
         public string Body { get; set; }
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage ="Bu alan boş gecilemez")]
         public string ImageUrl { get; set; }
+        public long ClickCount { get; set; }
         public DateTime CreatedDate { get; set; }
      
         public AppUser? Author { get; set; }
