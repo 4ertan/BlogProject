@@ -86,6 +86,13 @@
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
             </div>
+            <div class="row mb-3">
+                <label class="col-md-4 col-form-label" asp-for="ImagePostUrl"></label>
+                <div class="col-md-8">
+                    <input asp-for="ImagePostUrl" class="form-control" type="file">
+                    <span class="text-danger" asp-validation-for="ImagePostUrl"></span>
+                </div>
+            </div>
             <div class="form-group" >
                @* <label id="tags" class="mb-1">
                     <span style="padding-right:10px">Choose All / Clear</span>

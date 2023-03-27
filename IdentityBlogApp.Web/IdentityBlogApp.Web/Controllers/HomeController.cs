@@ -43,6 +43,7 @@ namespace IdentityBlogApp.Web.Controllers
                         ImageUrl = item.ImageUrl,
                         Title = item.Title,
                         ClickCount = item.ClickCount,
+                        
 
                     };
 

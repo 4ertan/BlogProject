@@ -1,5 +1,6 @@
 ﻿using IdentityBlogApp.Web.Models;
 using Microsoft.Build.Framework;
+using Microsoft.Extensions.FileProviders;
 using System.ComponentModel.DataAnnotations;
 
 namespace IdentityBlogApp.Web.ViewModels
@@ -17,6 +18,7 @@ namespace IdentityBlogApp.Web.ViewModels
         public string Body { get; set; }
         [System.ComponentModel.DataAnnotations.Required(ErrorMessage ="Bu alan boş gecilemez")]
         public string ImageUrl { get; set; }
+        public IFormFile?  ImagePostUrl { get; set; }
         public long ClickCount { get; set; }
         public DateTime CreatedDate { get; set; }
      

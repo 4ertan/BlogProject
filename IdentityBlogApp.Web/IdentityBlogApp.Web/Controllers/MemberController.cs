@@ -35,6 +35,7 @@ namespace IdentityBlogApp.Web.Controllers
                 PhoneNumber = currentUser.PhoneNumber,
                 UserName = currentUser.UserName,
                 PictureUrl = currentUser.Picture,
+                Bio= currentUser.Bio,
             };
             return View(userViewModel);
         }
@@ -147,7 +148,17 @@ namespace IdentityBlogApp.Web.Controllers
             {
                 post.PostTags.Add(new() {Name=item});
             }
-            post.ImageUrl=model.ImageUrl;
+
+            if (model.ImagePostUrl != null && model.ImagePostUrl.Length > 0)
+            {
+                var wwwrootFolder = _fileProvider.GetDirectoryContents("wwwroot");
+                string randomFileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(model.ImagePostUrl.FileName)}";
+                var newPicturePath = Path.Combine(wwwrootFolder!.First(x => x.Name == "postpictures").PhysicalPath, randomFileName);
+                using var stream = new FileStream(newPicturePath, FileMode.Create);
+                await model.ImagePostUrl.CopyToAsync(stream);
+                post.ImageUrl = randomFileName;
+            }
+           
             _appDbContext.Add(post);
             _appDbContext.SaveChanges();
             TempData["Success"] = "Post başarılı";
