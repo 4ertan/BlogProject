@@ -10,6 +10,12 @@
 
 
 <h1>Üye Listesi</h1>
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Success"]
+    </div>
+}
 
 <table id="table_id" class="table table-bordered">
    <thead>

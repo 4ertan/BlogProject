@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BxroTcL0W2fAMeEunF6LJasYcMmh1vGxyIjj/8/U7S9eAP0qGqdv5SwNMZsYYkEt8z1B1o4gQqg5eM8mGbVYJQ==",
+  "dgSpecHash": "9fA6XpvVtbnjfsumRcG3w7A79ieth5u7jp1jC7zdFSG2RlaJe4rv1t6x0IG34HEt2qnryKmRzdoAKFnZnx7a2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.Web.csproj",
+  "projectFilePath": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ertan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Ertan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -10790,9 +10790,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.Web.csproj",
-      "projectName": "IdentityBlogApp.Web",
-      "projectPath": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.csproj",
+      "projectName": "IdentityBlogApp",
+      "projectPath": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\IdentityBlogApp.csproj",
       "packagesPath": "C:\\Users\\Ertan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\obj\\",
       "projectStyle": "PackageReference",

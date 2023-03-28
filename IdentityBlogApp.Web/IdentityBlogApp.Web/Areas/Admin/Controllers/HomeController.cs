@@ -59,10 +59,28 @@ namespace IdentityBlogApp.Web.Areas.Admin.Controllers
             UserViewModel model = new() { Id=user.Id, Name=user.UserName,CreatedDate=user.CreatedDate,Email=user.Email };
             return View(model);
         }
+        [HttpPost]
+        public IActionResult UserDelete(string userName,string id)
+        {
+         
+            var user = _appDbContext.Users.Find(userName);
+           _appDbContext.Remove(user);
+            _appDbContext.SaveChanges();
+            TempData["Success"] = $"{userName} Silindi.";
+            return RedirectToAction("UserList");
+        }
         public IActionResult TagList()
         {
            var tagList=_appDbContext.Tags.ToList();
             return View(tagList);
+        }
+        public IActionResult PostDelete(int id)
+        {
+            var post=_appDbContext.Posts.Find(id);
+            _appDbContext.Posts.Remove(post);
+            _appDbContext.SaveChanges();
+            TempData["Success"] = "Post Silindi";
+            return View();
         }
         public async Task<IActionResult> UserList()
         {

@@ -155,6 +155,7 @@ namespace IdentityBlogApp.Web.Controllers
             var PostComment= _appDbContext.Comments.Where(x=>x.PostId==post.Id).ToList();
             
             ViewBag.PostComment = PostComment;
+            
             CommentViewModel commentView= new();
             return View(commentView); 
         }

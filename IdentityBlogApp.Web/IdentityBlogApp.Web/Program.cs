@@ -1,4 +1,4 @@
-using IdentityBlogApp.Web.Extenisons;
+﻿using IdentityBlogApp.Web.Extenisons;
 using IdentityBlogApp.Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -9,22 +9,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConn")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConn")));
 
 builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory())));
 
 builder.Services.AddIdentityWithExt();
 builder.Services.ConfigureApplicationCookie(opt =>
 {
-    var cookieBuilder=new CookieBuilder();
+    var cookieBuilder = new CookieBuilder();
     cookieBuilder.Name = "AppCookie";
     opt.LoginPath = new PathString("/Home/SignIn");
     opt.LogoutPath = new PathString("/Member/logout");
 
     opt.AccessDeniedPath = new PathString("/Member/AccessDenied");
 
-    opt.Cookie= cookieBuilder;
-    opt.ExpireTimeSpan=TimeSpan.FromDays(60);
+    opt.Cookie = cookieBuilder;
+    opt.ExpireTimeSpan = TimeSpan.FromDays(60);
     opt.SlidingExpiration = true;
 
 });
@@ -34,7 +34,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    
+
     app.UseHsts();
 }
 
@@ -57,4 +57,4 @@ app.MapControllerRoute(
 
 
 
-    app.Run();
+app.Run();

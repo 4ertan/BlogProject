@@ -1,0 +1,12 @@
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\bin\Debug\net7.0\AppUser.Management.Service2.deps.json
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\bin\Debug\net7.0\AppUser.Management.Service2.dll
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\bin\Debug\net7.0\AppUser.Management.Service2.pdb
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.csproj.AssemblyReference.cache
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.AssemblyInfoInputs.cache
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.AssemblyInfo.cs
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.csproj.CoreCompileInputs.cache
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.dll
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\refint\AppUser.Management.Service2.dll
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\AppUser.Management.Service2.pdb
+C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\AppUser.Management.Service2\obj\Debug\net7.0\ref\AppUser.Management.Service2.dll

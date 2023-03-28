@@ -3,11 +3,15 @@
 @{
     ViewData["Title"] = "MemberPosts";
 }
+@section Css{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+}
+
 
 <h1 class="alert-info">Gönderilerim</h1>
 
 
-<table class="table table-hover">
+<table id="table_id" class="table table-hover">
     <thead>
         <tr>
             <th>
@@ -41,10 +45,26 @@
                 @Html.DisplayFor(modelItem => item.CreatedDate)
             </td>
             <td>
-                <a asp-action="PostDetail" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-warning mb-2" asp-controller="Home" asp-action="PostDetail" asp-route-id="@item.Id">Details</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@section Scripts{
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable();
+        });
+    </script>
+}
+<br />
+<br />
+<br />
+<br />
+<br />

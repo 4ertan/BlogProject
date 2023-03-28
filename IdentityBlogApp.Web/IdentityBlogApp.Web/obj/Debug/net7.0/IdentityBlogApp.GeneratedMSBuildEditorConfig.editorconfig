@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = IdentityBlogApp
+build_property.RootNamespace = IdentityBlogApp
+build_property.ProjectDir = C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\IdentityBlogApp.Web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Ertan\Desktop\Ertan_Maraton\Proje\BlogProject\IdentityBlogApp.Web\IdentityBlogApp.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/AddTag.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZGRUYWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/TagList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxUYWdMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/UserDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxVc2VyRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Home/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxVc2VyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/AuthorDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRob3JEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/ForgetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/PostDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3N0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/PostList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3N0TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/PostPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQb3N0UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Home/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXEFjY2Vzc0RlbmllZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/MemberPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXE1lbWJlclBvc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/PasswordChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXFBhc3N3b3JkQ2hhbmdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/PostAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXFBvc3RBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Member/UserEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXFVzZXJFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Shared/_NavbarLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXJMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wmzftrj4wy
+
+[C:/Users/Ertan/Desktop/Ertan_Maraton/Proje/BlogProject/IdentityBlogApp.Web/IdentityBlogApp.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wvp7ujbao1
