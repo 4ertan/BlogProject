@@ -34,11 +34,11 @@
                             <div class="col-md-4">
                                 @if (String.IsNullOrEmpty(item.ImageUrl))
                                 {
-                                    <img class="rounded" src="/postpictures/default_post_picture.png" width="170"/>
+                                    <img class="rounded" src="/postpictures/default_post_picture.png" width="170" height="170"/>
                                 }
                                 else
                                 {
-                                    <img class="rounded" src="/postpictures/@(item.ImageUrl)" width="170" />
+                                    <img class="rounded" src="/postpictures/@(item.ImageUrl)" width="170" height="170" />
                                 }
                             </div>
                             <div class="col-md-8">
@@ -48,7 +48,7 @@
                                     <p></p>
                                     <p class="card-text"><a asp-action="PostDetail" asp-route-id="@item.Id">Detay</a></p>
 
-                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>@item.ClickCount </span> </small> </p>
+                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>&nbsp;@item.ClickCount </span> </small> </p>
                                 </div>
                             </div>
                         </div>

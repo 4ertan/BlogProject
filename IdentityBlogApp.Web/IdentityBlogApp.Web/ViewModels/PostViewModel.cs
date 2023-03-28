@@ -22,6 +22,7 @@ namespace IdentityBlogApp.Web.ViewModels
         public IFormFile?  ImagePostUrl { get; set; }
         public long? ClickCount { get; set; }
         public DateTime? CreatedDate { get; set; }
+        public string? AuthorName { get; set; }
      
         public AppUser? Author { get; set; }
         public List<Tag>? Tags { get; set; }

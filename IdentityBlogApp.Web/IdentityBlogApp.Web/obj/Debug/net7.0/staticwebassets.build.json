@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QLhdVE/QH1pDbeNTGl53dH/tbKqjow0AzlMB2+5WvVU=",
+  "Hash": "ndmBJc0320peDtG5SkAn63scnFS3rcNVXPjRDtKjkQo=",
   "Source": "IdentityBlogApp.Web",
   "BasePath": "_content/IdentityBlogApp.Web",
   "Mode": "Default",
@@ -1088,6 +1088,23 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png"
     },
     {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\987d0957-0894-4b28-b7cc-e17c418fd438.jpeg",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/987d0957-0894-4b28-b7cc-e17c418fd438.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\987d0957-0894-4b28-b7cc-e17c418fd438.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png",
       "SourceId": "IdentityBlogApp.Web",
       "SourceType": "Discovered",
@@ -1120,23 +1137,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\default_post_picture.PNG"
-    },
-    {
-      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\7b8ee02b-1150-420d-b7d4-a959ae304c8b.jpg",
-      "SourceId": "IdentityBlogApp.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
-      "BasePath": "_content/IdentityBlogApp.Web",
-      "RelativePath": "userpictures/7b8ee02b-1150-420d-b7d4-a959ae304c8b.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\userpictures\\7b8ee02b-1150-420d-b7d4-a959ae304c8b.jpg"
     },
     {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\9e47bff2-5b0a-4eda-b19b-ed3ff1ce9fd3.PNG",

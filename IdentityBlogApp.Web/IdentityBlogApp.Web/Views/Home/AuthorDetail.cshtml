@@ -1,0 +1,35 @@
+﻿@model IdentityBlogApp.Web.ViewModels.AuthorDetailViewModel
+
+@{
+    ViewData["Title"] = "AuthorDetail";
+}
+
+
+<div class="row">
+    <div class="card mb-3 offset-4" style="max-width: 540px;">
+        <h1>Yazar Detayı</h1>
+        <div class="row g-0">
+            <div class="col-md-4 mt-3 mb-3">
+                @if (String.IsNullOrEmpty(Model.Image))
+                {
+                    <img class="rounded" src="/userpictures/default_user_picture.png" width="170" height="170" />
+                }
+                else
+                {
+                    <img class="rounded" src="/userpictures/@(Model.Image)" width="170" height="170"/>
+                }
+
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı Adı: @Html.DisplayFor(model => model.UserName)</h5>
+
+                    <p class="card-text"><h5>Bio</h5></p>
+                    <p class="card-text"> @Html.DisplayFor(model => model.Bio)</p>
+                    <p class="card-text">Toplam Gönderi : @Html.DisplayFor(model => model.TotalPost)</p>
+                    <p class="card-text"><small class="text-body-secondary">@Html.DisplayFor(model => model.CreatedDate)</small></p>
+                </div>
+            </div>
+        </div>
+    </div>    <div class="col-3 offset-3"></div>
+</div>

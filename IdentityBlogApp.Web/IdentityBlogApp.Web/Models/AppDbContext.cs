@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using IdentityBlogApp.Web.Models;
 using IdentityBlogApp.Web.Areas.Admin.Models;
+using IdentityBlogApp.Web.ViewModels;
 
 namespace IdentityBlogApp.Web.Models
 {
@@ -15,6 +16,8 @@ namespace IdentityBlogApp.Web.Models
         public DbSet<IdentityBlogApp.Web.Models.Post> Posts { get; set; } = default!;
 
         public DbSet<IdentityBlogApp.Web.Areas.Admin.Models.UserViewModel> UserViewModel { get; set; } = default!;
+
+        public DbSet<IdentityBlogApp.Web.ViewModels.AuthorDetailViewModel> AuthorDetailViewModel { get; set; } = default!;
         
        
     }

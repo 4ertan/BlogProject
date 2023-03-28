@@ -44,6 +44,7 @@ namespace IdentityBlogApp.Web.Controllers
                         Title = item.Title,
                         ClickCount = item.ClickCount,
                         
+                        
 
                     };
 
@@ -54,6 +55,17 @@ namespace IdentityBlogApp.Web.Controllers
                 return View(PostViewModelList);
             }
             return View();
+        }
+       
+        public async Task<IActionResult> AuthorDetail(string UserName)
+        {
+            var user=await _userManager.FindByNameAsync(UserName);
+            var totalpost=_appDbContext.Posts.Where(x=>x.AppUserId == user.Id).Count();
+          
+            AuthorDetailViewModel model=new() { Id=user.Id, UserName=user.UserName,CreatedDate=user.CreatedDate, TotalPost = totalpost,Image=user.Picture,Bio=user.Bio };
+
+            return View(model);
+
         }
         public IActionResult PostPage()
         {
@@ -96,6 +108,8 @@ namespace IdentityBlogApp.Web.Controllers
             }
             var post = _appDbContext.Posts.Find(id);
             string PostAutorId = post.AppUserId;
+            var author=_appDbContext.Users.Where(x=>x.Id==PostAutorId).FirstOrDefault();
+            ViewBag.AuthorName = author.UserName;
             var postList = _appDbContext.Posts.ToList();
             List<PostViewModel> AuthorPosts= new List<PostViewModel>();
             foreach (var item in postList)

@@ -8,7 +8,7 @@
     <div class="card-header">
         @Model.Title
     </div>
-    <div class="col-md-6 offset-3 mt-4 mb-4">
+    <div class="col-md-6 offset-4 mt-4 mb-4">
         @if (String.IsNullOrEmpty(Model.ImageUrl))
         {
             <img class="rounded" src="/postpictures/default_post_picture.png" width="400" />
@@ -21,7 +21,7 @@
     <div class="card-body">
         <blockquote class="blockquote mb-0">
             <p>@Model.Body</p>
-            <footer class="blockquote-footer">@Model.CreatedDate <cite title="Source Title"></cite></footer>
+            <footer class="blockquote-footer">@Model.CreatedDate <cite title="Source Title"></cite>&nbsp; <a asp-action="AuthorDetail" asp-route-userName="@ViewBag.AuthorName">@ViewBag.AuthorName</a></footer>
         </blockquote>
     </div>
 </div>
@@ -42,11 +42,11 @@
                             <div class="col-md-4">
                                 @if (String.IsNullOrEmpty(item.ImageUrl))
                                 {
-                                    <img class="rounded" src="/postpictures/default_post_picture.png" width="170" />
+                                    <img class="rounded" src="/postpictures/default_post_picture.png" width="170" height="170" />
                                 }
                                 else
                                 {
-                                    <img class="rounded" src="/postpictures/@(item.ImageUrl)" width="170" />
+                                    <img class="rounded" src="/postpictures/@(item.ImageUrl)" width="170" height="170" />
                                 }
                             </div>
                             <div class="col-md-8">
@@ -56,7 +56,7 @@
                                     <p></p>
                                     <p class="card-text"><a asp-action="PostDetail" asp-route-id="@item.Id">Detay</a></p>
 
-                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>@item.ClickCount </span> </small> </p>
+                                    <p class="card-text"><i class="bi bi-calendar3"><span> &emsp;</span></i><small class="text-muted">@item.CreatedDate<span><span> &emsp;</span> <i class="bi bi-sina-weibo"></i>&nbsp;@item.ClickCount </span> </small> </p>
                                 </div>
                             </div>
                         </div>
