@@ -69,7 +69,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="PostAdd">
+        <form asp-action="PostAdd" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -81,13 +81,13 @@
                 <textarea asp-for="Body" class="form-control" rows="4"></textarea>
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="ImageUrl" class="control-label"></label>
                 <input asp-for="ImageUrl" class="form-control" />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
-            <div class="row mb-3">
-                <label class="col-md-4 col-form-label" asp-for="ImagePostUrl"></label>
+            </div>*@
+            <div class="form-group">
+                <label class="control-label" asp-for="ImagePostUrl"></label>
                 <div class="col-md-8">
                     <input asp-for="ImagePostUrl" class="form-control" type="file">
                     <span class="text-danger" asp-validation-for="ImagePostUrl"></span>

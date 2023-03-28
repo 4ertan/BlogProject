@@ -73,7 +73,7 @@ namespace IdentityBlogApp.Web.Controllers
                         CreatedDate = item.CreatedDate,
                         ImageUrl = item.ImageUrl,
                         Title = item.Title,
-                       ClickCount=item.ClickCount,
+                        ClickCount=item.ClickCount,
                        
                     };
                     

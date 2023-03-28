@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png",
+      "PackagePath": "staticwebassets\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png"
+    },
+    {
+      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png",
+      "PackagePath": "staticwebassets\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png"
+    },
+    {
       "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\default_post_picture.PNG",
       "PackagePath": "staticwebassets\\postpictures\\default_post_picture.PNG"
     },

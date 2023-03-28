@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dVjSwmi4UXJjmSCLqJVtDSDRTwwvT6EnW3P7ZSw+nYI=",
+  "Hash": "k94DsUcWmJCPKv9p1HlwQLVJEeBgMFHR6GKVwYJWtlc=",
   "Source": "IdentityBlogApp.Web",
   "BasePath": "_content/IdentityBlogApp.Web",
   "Mode": "Default",
@@ -1069,6 +1069,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/7f36c370-a4df-4ca6-b6f0-faada1575dee.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png"
     },
     {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\default_post_picture.PNG",

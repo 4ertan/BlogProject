@@ -159,7 +159,7 @@ namespace IdentityBlogApp.Web.Controllers
                 post.ImageUrl = randomFileName;
             }
            
-            _appDbContext.Add(post);
+            _appDbContext.Add(post);    
             _appDbContext.SaveChanges();
             TempData["Success"] = "Post başarılı";
             return RedirectToAction("PostAdd");

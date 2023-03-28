@@ -4,8 +4,19 @@
 }
 
 <div class="card">
+    
     <div class="card-header">
         @Model.Title
+    </div>
+    <div class="col-md-6 offset-3 mt-4 mb-4">
+        @if (String.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img class="rounded" src="/postpictures/default_post_picture.png" width="400" />
+        }
+        else
+        {
+            <img class="rounded" src="/postpictures/@(Model.ImageUrl)" width="400" />
+        }
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">
@@ -29,7 +40,14 @@
                     <div class="card mb-4" style="max-width: 500px;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img src="..." class="card-img" alt="...">
+                                @if (String.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img class="rounded" src="/postpictures/default_post_picture.png" width="170" />
+                                }
+                                else
+                                {
+                                    <img class="rounded" src="/postpictures/@(item.ImageUrl)" width="170" />
+                                }
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">

@@ -16,11 +16,12 @@ namespace IdentityBlogApp.Web.ViewModels
         [Display(Name ="İcerik")]
         [MinLength(25,ErrorMessage ="Minimum 25 karakter giriniz")]
         public string Body { get; set; }
-        [System.ComponentModel.DataAnnotations.Required(ErrorMessage ="Bu alan boş gecilemez")]
-        public string ImageUrl { get; set; }
+        
+        public string? ImageUrl { get; set; }
+        [Display(Name ="Fotoğraf")]
         public IFormFile?  ImagePostUrl { get; set; }
-        public long ClickCount { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public long? ClickCount { get; set; }
+        public DateTime? CreatedDate { get; set; }
      
         public AppUser? Author { get; set; }
         public List<Tag>? Tags { get; set; }
