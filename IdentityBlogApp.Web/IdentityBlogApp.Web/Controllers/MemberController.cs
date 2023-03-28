@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
 namespace IdentityBlogApp.Web.Controllers
@@ -92,6 +93,15 @@ namespace IdentityBlogApp.Web.Controllers
             await _userManager.UpdateAsync(currentUser);
             return RedirectToAction("UserEdit");
 
+        }
+        public async Task<IActionResult> AccountDelete(string userName)
+        {
+            var user=await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == userName);
+            _appDbContext.Users.Remove(user);
+            _appDbContext.SaveChanges();
+           await _signInManager.SignOutAsync();
+            TempData["SuccessMessage"] = "Hesabınız Silinmistir.";
+            return RedirectToAction("SignUp", "Home");
         }
         public IActionResult MemberPosts()
         {

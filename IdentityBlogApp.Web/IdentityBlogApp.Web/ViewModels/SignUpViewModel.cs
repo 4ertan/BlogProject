@@ -24,11 +24,16 @@ namespace IdentityBlogApp.Web.ViewModels
         public string Email { get; set; }
         [Required(ErrorMessage = "Telefon alanı boş bırakılamaz")]
         [Display(Name = "Telefon :")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
+                   ErrorMessage = "Başında 0 olmadan telefon formatı giriniz.")]
+
         public string Phone { get; set; }
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Şifre alanı boş bırakılamaz")]
         [Display(Name = "Şifre :")]
         public string Password { get; set; }
+        [DataType(DataType.Password)]
         [Compare(nameof(Password),ErrorMessage ="Şifre aynı değildir.")]
         [Required(ErrorMessage = "Şifre Tekrar alanı boş bırakılamaz")]
         [Display(Name = "Şifre Tekrar :")]

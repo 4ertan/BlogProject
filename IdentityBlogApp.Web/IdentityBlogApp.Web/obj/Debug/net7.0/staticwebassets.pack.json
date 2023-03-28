@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\postpictures\\default_post_picture.PNG"
     },
     {
+      "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\7b8ee02b-1150-420d-b7d4-a959ae304c8b.jpg",
+      "PackagePath": "staticwebassets\\userpictures\\7b8ee02b-1150-420d-b7d4-a959ae304c8b.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\9e47bff2-5b0a-4eda-b19b-ed3ff1ce9fd3.PNG",
       "PackagePath": "staticwebassets\\userpictures\\9e47bff2-5b0a-4eda-b19b-ed3ff1ce9fd3.PNG"
     },
