@@ -7,6 +7,7 @@ namespace IdentityBlogApp.Web.ViewModels
         public int Id { get; set; }
         [Display(Name ="Yorum")]
         public string Text { get; set; }
+
         
     }
 }

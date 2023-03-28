@@ -14,6 +14,7 @@ namespace IdentityBlogApp.Web.Models
         public DbSet<IdentityBlogApp.Web.Models.Tag> Tags { get; set; } = default!;
 
         public DbSet<IdentityBlogApp.Web.Models.Post> Posts { get; set; } = default!;
+        public DbSet<Comment> Comments { get; set; }
 
         public DbSet<IdentityBlogApp.Web.Areas.Admin.Models.UserViewModel> UserViewModel { get; set; } = default!;
 

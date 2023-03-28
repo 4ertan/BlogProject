@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ndmBJc0320peDtG5SkAn63scnFS3rcNVXPjRDtKjkQo=",
+  "Hash": "dLpXQgKzXrA3JlvYQhRXjdeJcXG4TEejJdxa7i56Xlg=",
   "Source": "IdentityBlogApp.Web",
   "BasePath": "_content/IdentityBlogApp.Web",
   "Mode": "Default",
@@ -1088,6 +1088,23 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\7f36c370-a4df-4ca6-b6f0-faada1575dee.png"
     },
     {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\8d6365a8-606c-41f9-9b35-2311c2c3eff8.png",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/8d6365a8-606c-41f9-9b35-2311c2c3eff8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\8d6365a8-606c-41f9-9b35-2311c2c3eff8.png"
+    },
+    {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\987d0957-0894-4b28-b7cc-e17c418fd438.jpeg",
       "SourceId": "IdentityBlogApp.Web",
       "SourceType": "Discovered",
@@ -1122,6 +1139,23 @@
       "OriginalItemSpec": "wwwroot\\postpictures\\b1dcc0d5-f4de-45e5-a248-6d231faa5ac7.png"
     },
     {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\cd0e90f0-42dd-49f5-8358-dc5b5a28d021.jpg",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/cd0e90f0-42dd-49f5-8358-dc5b5a28d021.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\cd0e90f0-42dd-49f5-8358-dc5b5a28d021.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\default_post_picture.PNG",
       "SourceId": "IdentityBlogApp.Web",
       "SourceType": "Discovered",
@@ -1137,6 +1171,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\postpictures\\default_post_picture.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\postpictures\\e4a58eae-e12c-4f1e-97f3-2fc8c8a10b75.png",
+      "SourceId": "IdentityBlogApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\",
+      "BasePath": "_content/IdentityBlogApp.Web",
+      "RelativePath": "postpictures/e4a58eae-e12c-4f1e-97f3-2fc8c8a10b75.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\postpictures\\e4a58eae-e12c-4f1e-97f3-2fc8c8a10b75.png"
     },
     {
       "Identity": "C:\\Users\\Ertan\\Desktop\\Ertan_Maraton\\Proje\\BlogProject\\IdentityBlogApp.Web\\IdentityBlogApp.Web\\wwwroot\\userpictures\\9e47bff2-5b0a-4eda-b19b-ed3ff1ce9fd3.PNG",

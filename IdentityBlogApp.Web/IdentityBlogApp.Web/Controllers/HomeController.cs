@@ -59,12 +59,25 @@ namespace IdentityBlogApp.Web.Controllers
        
         public async Task<IActionResult> AuthorDetail(string UserName)
         {
+          
             var user=await _userManager.FindByNameAsync(UserName);
             var totalpost=_appDbContext.Posts.Where(x=>x.AppUserId == user.Id).Count();
           
             AuthorDetailViewModel model=new() { Id=user.Id, UserName=user.UserName,CreatedDate=user.CreatedDate, TotalPost = totalpost,Image=user.Picture,Bio=user.Bio };
 
             return View(model);
+
+        }
+        public async Task<IActionResult> AuthorDetail2(string id)
+        {
+
+            var user = await _userManager.FindByIdAsync(id);
+            var totalpost = _appDbContext.Posts.Where(x => x.AppUserId == user.Id).Count();
+
+            AuthorDetailViewModel model = new() { Id = user.Id, UserName = user.UserName, CreatedDate = user.CreatedDate, TotalPost = totalpost, Image = user.Picture, Bio = user.Bio };
+
+            //return View(model);
+            return RedirectToAction("AuthorDetail", model);
 
         }
         public IActionResult PostPage()
@@ -139,7 +152,9 @@ namespace IdentityBlogApp.Web.Controllers
             post.ClickCount = sayı + 1;
             _appDbContext.SaveChanges();
             ViewBag.postView = postView;
+            var PostComment= _appDbContext.Comments.Where(x=>x.PostId==post.Id).ToList();
             
+            ViewBag.PostComment = PostComment;
             CommentViewModel commentView= new();
             return View(commentView); 
         }
@@ -220,8 +235,8 @@ namespace IdentityBlogApp.Web.Controllers
             }
             
          var identityResult=await  _userManager.CreateAsync(new() {UserName=request.UserName,PhoneNumber=request.Phone,Email=request.Email},request.PasswordConfirm);
-            //await _roleManager.a
-           //await _roleManager.CreateAsync(new() { Name = "Member" });
+           
+            //await _roleManager.CreateAsync(new() { Name = "Admin" });
             if (identityResult.Succeeded)
             {
                 AppUser user = await _userManager.FindByEmailAsync(request.Email);
