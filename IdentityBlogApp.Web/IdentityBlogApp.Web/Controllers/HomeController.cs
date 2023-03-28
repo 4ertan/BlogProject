@@ -111,33 +111,50 @@ namespace IdentityBlogApp.Web.Controllers
             var author=_appDbContext.Users.Where(x=>x.Id==PostAutorId).FirstOrDefault();
             ViewBag.AuthorName = author.UserName;
             var postList = _appDbContext.Posts.ToList();
-            List<PostViewModel> AuthorPosts= new List<PostViewModel>();
-            foreach (var item in postList)
-            {
-                if (item.AppUserId==PostAutorId)
-                {
-                    PostViewModel postViewModel = new()
-                    {
-                        Id = item.Id,
-                        Body = item.Body,
-                        Author = item.AppUser,
-                        CreatedDate = item.CreatedDate,
-                        ImageUrl = item.ImageUrl,
-                        Title = item.Title,
-                        ClickCount = item.ClickCount,
-                    };
-                    AuthorPosts.Add(postViewModel);
+            #region
+            //List<PostViewModel> AuthorPosts= new List<PostViewModel>();
+            //foreach (var item in postList)
+            //{
+            //    if (item.AppUserId==PostAutorId)
+            //    {
+            //        PostViewModel postViewModel = new()
+            //        {
+            //            Id = item.Id,
+            //            Body = item.Body,
+            //            Author = item.AppUser,
+            //            CreatedDate = item.CreatedDate,
+            //            ImageUrl = item.ImageUrl,
+            //            Title = item.Title,
+            //            ClickCount = item.ClickCount,
+            //        };
+            //        AuthorPosts.Add(postViewModel);
 
-                }
-            }
-            ViewBag.PostAuthor = AuthorPosts;
+            //    }
+            //}
+
+            //ViewBag.PostAuthor = AuthorPosts;
+            #endregion 
             PostViewModel postView = new() { Body = post.Body, Title = post.Title, Author = post.AppUser, CreatedDate = post.CreatedDate, ImageUrl = post.ImageUrl };
             long sayı= post.ClickCount;
             post.ClickCount = sayı + 1;
             _appDbContext.SaveChanges();
-            return View(postView); 
+            ViewBag.postView = postView;
+            
+            CommentViewModel commentView= new();
+            return View(commentView); 
         }
 
+        [HttpPost]
+        public IActionResult PostDetail(CommentViewModel comment)
+        {
+            var userName = User.Identity.Name;
+            var FindUser=_appDbContext.Users.Where(x=>x.UserName==userName).FirstOrDefault();
+            string id = FindUser.Id;
+            Comment Newcomment = new() { PostId = comment.Id, Text = comment.Text,UserId=id };
+           _appDbContext.Add(Newcomment);
+            _appDbContext.SaveChanges();
+            return RedirectToAction("PostPage");
+        }
         public IActionResult About()
         {
             return View();

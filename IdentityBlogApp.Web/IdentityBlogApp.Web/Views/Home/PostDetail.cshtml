@@ -1,37 +1,81 @@
-﻿@model PostViewModel
+﻿@model CommentViewModel
 @{
     ViewData["Title"] = "PostDetail";
+    PostViewModel viewModel = ViewBag.postView;
 }
+
 
 <div class="card">
     
     <div class="card-header">
-        @Model.Title
+        
+        @viewModel.Title
     </div>
     <div class="col-md-6 offset-4 mt-4 mb-4">
-        @if (String.IsNullOrEmpty(Model.ImageUrl))
+        @if (String.IsNullOrEmpty(viewModel.ImageUrl))
         {
             <img class="rounded" src="/postpictures/default_post_picture.png" width="400" />
         }
         else
         {
-            <img class="rounded" src="/postpictures/@(Model.ImageUrl)" width="400" />
+            <img class="rounded" src="/postpictures/@(viewModel.ImageUrl)" width="400" />
         }
     </div>
     <div class="card-body">
         <blockquote class="blockquote mb-0">
-            <p>@Model.Body</p>
-            <footer class="blockquote-footer">@Model.CreatedDate <cite title="Source Title"></cite>&nbsp; <a asp-action="AuthorDetail" asp-route-userName="@ViewBag.AuthorName">@ViewBag.AuthorName</a></footer>
+            <p>@viewModel.Body</p>
+            <footer class="blockquote-footer">@viewModel.CreatedDate <cite title="Source Title"></cite>&nbsp; <a asp-action="AuthorDetail" asp-route-userName="@ViewBag.AuthorName">@viewModel.AuthorName</a></footer>
         </blockquote>
     </div>
 </div>
 
+<form >
+
+
+</form>
+
+
 <nav class="navbar bg-body-tertiary bg-primary mt-2">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark">Yazarın Gönderileri&nbsp;<i class="bi bi-pencil-square"></i></a>
+        <a class="navbar-brand text-dark">Yorumlar &nbsp;<i class="bi bi-pencil-square"></i></a>
     </div>
 </nav>
-<div class="row mt-2">
+
+<div class="row">
+    <div class="col-sm-5 col-md-6 col-12 pb-4">
+        <h1>Comments</h1>
+        <div class="comment mt-4 text-justify float-left">
+            <img src="https://i.imgur.com/yTFUilP.jpg" alt="" class="rounded-circle" width="40" height="40">
+            <h4>Jhon Doe</h4>
+            <span>- 20 October, 2018</span>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+        </div>
+
+    </div>
+
+</div>
+@if (User.Identity!.IsAuthenticated)
+{
+    <div class="mt-2">
+        <form asp-action="PostDetail" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="@Model.Text" class="control-label"></label>
+                <textarea asp-for="@Model.Text" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="@Model.Text" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Yorum Yap" class="btn btn-primary mt-2" />
+            </div>
+        </form>
+    </div>
+
+}
+
+
+
+@*<div class="row mt-2">
     <div class="col-md-12">
         <div class="row">
             @foreach (var item in ViewBag.PostAuthor)
@@ -67,4 +111,4 @@
         </div>
     </div>
 
-</div>
+</div>*@
